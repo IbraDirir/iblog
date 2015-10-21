@@ -9,4 +9,3 @@ class EntryAdmin(MarkdownModelAdmin):
 
 admin.site.register(models.Entry, EntryAdmin)
 
-class EntryAdmin(MarkdownModelAdmin):
