@@ -6,9 +6,9 @@ class EntryQuerySet(models.QuerySet):
         return self.filter(publish=True)
 
 class Entry(models.Model):
-    title = models.CharField(max_length=200)
-    body = models.TextFiel()
-    slug = models.SlugField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
+    body = models.TextField()
+    slug = models.SlugField(max_length=200, default =True)
     publish = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
