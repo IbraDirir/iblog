@@ -13,3 +13,11 @@ class Entry(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+def __str__(self):
+    return self.title
+
+
+    class Meta:
+        verbose_name = "Blog Entry"
+        verbose_name_plural = "Blog Entries"
+        ordering = ["-created"]
